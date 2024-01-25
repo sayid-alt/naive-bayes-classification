@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../static/output.css" rel="stylesheet">
+	<title>Beyes</title>
+</head>
+
+<body>
+
+	<section
+		class="bg-center bg-no-repeat bg-[url('https://images.unsplash.com/photo-1579170053380-58064b2dee67?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-gray-700 bg-blend-multiply">
+		<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+			<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Are
+				you in the above or bellow middle class?</h1>
+			<p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Filling up the requaired
+				fields below and it'll predict your income, time to play with it!.
+			</p>
+			<div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+				<a href="#form-prediction"
+					class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+					Get started
+					<svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+						fill="none" viewBox="0 0 14 10">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							d="M1 5h12m0 0L9 1m4 4L9 9" />
+					</svg>
+				</a>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<form class="max-w-md mx-auto my-10" id="form-prediction">
+		<div class="py-5 ">
+			<h1 class="h1 font-bold text-4xl">Predict here!</h1>
+		</div>
+
+		<!-- Age -->
+		<label for="quantity-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age:</label>
+		<div class="relative flex items-center max-w-[8rem]">
+			<button type="button" id="decrement-button" data-input-counter-decrement="quantity-input"
+				class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-s-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+				<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+					fill="none" viewBox="0 0 18 2">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M1 1h16" />
+				</svg>
+			</button>
+			<input type="text" id="quantity-input" data-input-counter aria-describedby="helper-text-explanation"
+				class="bg-gray-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+				placeholder="24" required>
+			<button type="button" id="increment-button" data-input-counter-increment="quantity-input"
+				class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+				<svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+					fill="none" viewBox="0 0 18 18">
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M9 1v16M1 9h16" />
+				</svg>
+			</button>
+		</div>
+
+		<!-- Workclass -->
+		<div class="pt-3">
+			<label for="underline_select" class="sr-only">Workclass</label>
+			<select id="underline_select"
+				class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+				required>
+
+				<option selected>Workclass</option>
+				<option value="State-gov">State goverment</option>
+				<option value="Self-emp-not-inc">Self employee not incoporate</option>
+				<option value="Private">Private</option>
+				<option value="Federal-gov">Federal Goverment</option>
+				<option value="Local-gov">Local Goverment</option>
+				<option value="Self-emp-inc">Self Employee Incorporate</option>
+				<option value="Without-pay">Without pay</option>
+				<option value="Never-worked">Never Worked</option>
+			</select>
+		</div>
+		<!-- education -->
+		<div class="pt-3">
+			<label for="underline_select" class="sr-only">Education</label>
+			<select id="underline_select"
+				class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
+				required>
+
+				<option selected>Education</option>
+				<option value="Bachelors">Bachelors</option>
+				<option value="HS-grad">HS-grad</option>
+				<option value="11th">11th</option>
+				<option value="9th">9th</option>
+				<option value="Some-college">Some-college</option>
+				<option value="Assoc-acdm">Assoc-acdm</option>
+				<option value="Assoc-voc">Assoc-voc</option>
+				<option value="7th-8th">7th-8th</option>
+				<option value="Doctorate">Doctorate</option>
+				<option value="Prof-school">Prof-school</option>
+				<option value="5th-6th">5th-6th</option>
+				<option value="10th">10th</option>
+				<option value="1st-4th">1st-4th</option>
+				<option value="Preschool">Preschool</option>
+				<option value="12th">12th</option>
+			</select>
+		</div>
+
+
+		<div class="relative z-0 w-full mb-5 group">
+			<input type="email" name="floating_email" id="floating_email"
+				class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+				placeholder=" " required />
+			<label for="floating_email"
+				class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+				address</label>
+		</div>
+		<div class="relative z-0 w-full mb-5 group">
+			<input type="password" name="floating_password" id="floating_password"
+				class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+				placeholder=" " required />
+			<label for="floating_password"
+				class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+		</div>
+		<div class="relative z-0 w-full mb-5 group">
+			<input type="password" name="repeat_password" id="floating_repeat_password"
+				class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+				placeholder=" " required />
+			<label for="floating_repeat_password"
+				class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm
+				password</label>
+		</div>
+		<div class="grid md:grid-cols-2 md:gap-6">
+			<div class="relative z-0 w-full mb-5 group">
+				<input type="text" name="floating_first_name" id="floating_first_name"
+					class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+					placeholder=" " required />
+				<label for="floating_first_name"
+					class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First
+					name</label>
+			</div>
+			<div class="relative z-0 w-full mb-5 group">
+				<input type="text" name="floating_last_name" id="floating_last_name"
+					class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+					placeholder=" " required />
+				<label for="floating_last_name"
+					class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last
+					name</label>
+			</div>
+		</div>
+		<div class="grid md:grid-cols-2 md:gap-6">
+			<div class="relative z-0 w-full mb-5 group">
+				<input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
+					class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+					placeholder=" " required />
+				<label for="floating_phone"
+					class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone
+					number (123-456-7890)</label>
+			</div>
+			<div class="relative z-0 w-full mb-5 group">
+				<input type="text" name="floating_company" id="floating_company"
+					class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+					placeholder=" " required />
+				<label for="floating_company"
+					class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company
+					(Ex. Google)</label>
+			</div>
+		</div>
+		<button type="submit"
+			class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+	</form>
+
+
+	<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+</body>
+
+</html>
